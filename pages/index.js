@@ -15,9 +15,10 @@ export default function Home() {
       <h2>Dominik Zaczek: Front-End Developer with Back-End and UX/UI Experience</h2>
 
       <ul>
-        <li><b>New Music Institute:</b> Full-Stack (HTML, CSS, JS, ExpressJS, ReactJS)</li>
+        <li><b>New Music Institute:</b> Full-Stack (HTML, CSS, JS, ExpressJS, ReactJS, Heroku)</li>
         <li><b>Glendower Parents' Association:</b> Front-End (HTML, CSS, JS) </li>
         <li><b>TutorUp (concept):</b> Full-Stack (Firebase + ReactJS)</li>
+        <li><b>This Portfolio:</b> Full-Stack (HTML, CSS, JS, NextJS, Material UI, Vercel)</li>
       </ul>
     </div>
   )
