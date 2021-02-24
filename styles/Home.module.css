@@ -121,11 +121,3 @@
   }
 }
 
-.portfolio{
-  width: auto;
-  margin-top: 50px;
-}
-
-.portfolio:hover{
-  border: 30px white;
-}
