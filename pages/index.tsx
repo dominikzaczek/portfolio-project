@@ -15,7 +15,6 @@ export default function Home({articles, portfolio}) {
   const [content, setContent] = useState(null)
   const [contentRequested, setContentRequested] = useState(false)
 
-  //Overlay Component
   //functions
  async function showPortfolio(props){
    setContentRequested(true)
@@ -32,14 +31,15 @@ export default function Home({articles, portfolio}) {
     setContentRequested(false)
     setContent(null)
   }
+
   //return
   return (
     <div className={styles.container}>
+       {contentRequested ? <Article onClose={resetState} articleContent={content} /> : false}
       <Head>
         <title>Dominik Zaczek - Front-End Developer with UX/UI experience</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      {contentRequested ? <Article onClose={resetState} articleContent={content} /> : false}
       <Logo />
       <h2>Dominik Zaczek: Front-End Developer with Back-End and UX/UI Experience</h2>
       <h2 className="text-4xl font-semibold mt-20 mb-10">Projects</h2>
@@ -49,12 +49,29 @@ export default function Home({articles, portfolio}) {
           
         })}
       </div>
+      <div className="container">
+      <div className="grid grid-cols-2 gap-4">
+      <div className="p-5 prose">
+      <h2 className="text-4xl font-semibold mt-10 mb-10">Something to be proud of</h2>
+      <p className="italic tracking-wide mb-5">It has been a pleasure to have our websites taken care by Dominik. 
+Dominik demonstrated a great deal of commitment and understanding of our company’s needs. 
+Dominik’s creative input and technical knowledge were both inspiring and enhancing of our digital endeavours.
+Dominik excelled helping us installing and managing WordPress, hardening security of our websites and dealing with selecting and installing the most advanced plugins for our websites. 
+The beautiful logo of our <a href="http://pianistaid.com">pianistaid.com</a> website will accompany us for the years to come.
+In a nutshell, I strongly recommend Dominik and his services to any individual or company seeking to delegate the management and maintenance of their websites.
+As director of WKMT ltd. I remain reachable via e-mail for any further referral needed.</p>
+Juan Rezzuto, CEO of <a href="http://wkmt.co.uk">WKMT</a>
+      </div>
+      <div className="p-5 prose dark">
       <h2 className="text-4xl font-semibold mt-10 mb-10">Articles</h2>
       {
         articles.map(function(article){
-          return <h3>{article.title}</h3>
+          return <h4>{article.title}</h4>
         })
       }
+      </div>
+      </div>
+      </div>
     </div>
   )
 }
