@@ -1,7 +1,7 @@
 import { ApolloClient, InMemoryCache, gql } from '@apollo/client';
 
 const client = new ApolloClient({
-    uri: 'rare.dominikbrendan.com/graphql',
+    uri: 'http://rare.dominikbrendan.com/graphql',
     cache: new InMemoryCache()
   });
 export default async(req, res) => {

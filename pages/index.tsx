@@ -78,7 +78,7 @@ Juan Rezzuto, CEO of <a href="http://wkmt.co.uk">WKMT</a>
 
 export async function getStaticProps(){
   const client = new ApolloClient({
-    uri: 'rare.dominikbrendan.com/graphql',
+    uri: 'http://rare.dominikbrendan.com/graphql',
     cache: new InMemoryCache()
   });
   const { data } = await client.query<{posts: {nodes: []}, pages: {nodes: []}}>({
