@@ -1,11 +1,11 @@
 import { ApolloClient, InMemoryCache, gql } from '@apollo/client';
 
 const client = new ApolloClient({
-    uri: 'http://rare.dominikbrendan.com/graphql',
+    uri: 'https://rare.dominikbrendan.com/graphql',
     cache: new InMemoryCache()
   });
 export default async(req, res) => {
-    const id = req.body.id
+    const id = req.body
     try{
         const {data} = await client.query({
             query: gql`
@@ -18,9 +18,8 @@ export default async(req, res) => {
                   }
             `
         });
-        console.log(data.pages.nodes)
         res.status(200).send(data.pages.nodes[0].content)
     } catch(error){
-        alert(error)
+        res.status(500).send(error)
     }
 }
