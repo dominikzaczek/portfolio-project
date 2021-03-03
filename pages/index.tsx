@@ -43,14 +43,14 @@ export default function Home({articles, portfolio}) {
       <Logo />
       <h2>Dominik Zaczek: Front-End Developer with Back-End and UX/UI Experience</h2>
       <h2 className="text-4xl font-semibold mt-20 mb-10">Projects</h2>
-      <div className="flex px-4 flex-row flex-wrap">
+      <div className="sm:flex px-4 flex-row flex-wrap">
         {portfolio.map(function(portfolio){
           return <PortfolioButton onClick={() => showPortfolio(portfolio.pageId)} imageSource={portfolio.featuredImage.node.mediaItemUrl} portfolioId={portfolio.slug}/>
           
         })}
       </div>
       <div className="container">
-      <div className="grid grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
       <div className="p-5 prose">
       <h2 className="text-4xl font-semibold mt-10 mb-10">Something to be proud of</h2>
       <p className="italic tracking-wide mb-5">It has been a pleasure to have our websites taken care by Dominik. 
