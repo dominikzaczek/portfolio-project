@@ -13,6 +13,9 @@ module.exports = {
             p: {
               fontSize: '1.5em',
             },
+            blockquote:{
+              color: '#fff',
+            },
             a: {
               color: '#5ec9c4',
               '&:hover': {
