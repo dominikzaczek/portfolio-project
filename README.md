@@ -1,34 +1,13 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Back End
 
-## Getting Started
+I used my old WordPress portfolio as the GraphQL endpoint. It was easier for me than rewriting/formatting the articles I have written. 
 
-First, run the development server:
+For the front page, it uses StaticProps because it's faster and I do not need to update it frequently. For the posts and portfolio, I use dynamic fetching, because I am still shaping the pages, so it's easier for me to update them quickly. Once I am content, I will switch to StaticProps because it will improve the speed of loading. 
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+## Front End
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+I use NextJS - I created a new app with create-nextjs-app and simply coded what I needed. I also used TailwindCSS as my CSS framework of choice - it was the first time I fully trusted a framework that isn't Bootstrap and I don't regret it. Not looking back now!
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## Deployment
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+The website is deployed on Vercel. I have deployed to other platforms before but Vercel has been the most supportive and easy to deploy to. Especially in terms of NextJS. 
